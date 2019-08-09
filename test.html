@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>test</title>
+</head>
+<body>
+	<div >
+	<br />
+	<br />
+	<!--二维数组来保存，
+		[ 0 => [], //表单项
+		  1 => [],
+		  2 => [],
+		  ……
+		]
+		// 每个表单项的数组结构
+		0 => [
+			'tag' => '', //标记
+			'text'=> '', //提示文本
+			'attr'=> [], //属性数组
+			'option'=> [], //选项数组 保存单选框或复选框中的每一个选项
+			'default'=>'' //默认值
+		]
+	-->
+	<form action="form.php" method="post" enctype="multipart/form -data">
+		姓名：<input type="text" name="user" value="test"><br />
+	    密码：<input type="password" name="pwd" value=""><br />
+		&nbsp;&nbsp;&nbsp;&nbsp;<input type="file" name="upload"><br />
+		<input type="hidden" name="id" value="2">
+
+		性别：
+		<label><input type="radio" name="gender" value="m" checked>男</label>
+		<label><input type="radio" name="gender" value="w" >女<br /></label>
+		爱好：<input type="checkbox" name="hobby[]" value="swimming"> 游泳
+		<input type="checkbox" name="hobby[]" value="reading">读书
+		<input type="checkbox" name="hobby[]" value="running">跑步
+		<br />
+		自我介绍：<br/>
+		<textarea name="introduce" clos="5" rows="10">
+			
+		</textarea><br>
+		住址：<select name="area" id="">
+				<option selected>--请选择--</option>
+				<option value="Beijing">北京</option>
+				<option value="Shenzhen">深圳</option>
+				<option value="Shanghai">上海</option>
+			</select>
+		
+		<br />
+		<input type="reset" value="重置">
+		<input type="submit" value="提交">
+		
+	</form>
+	</div>
+
+</body>
+</html>
